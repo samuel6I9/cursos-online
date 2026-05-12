@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page - Cursos Online</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f5f7fb;
+      color:#222;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* HEADER */
+
+    header{
+      background:linear-gradient(135deg,#1e3c72,#2a5298);
+      color:white;
+      padding:80px 0;
+    }
+
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h1{
+      font-size:48px;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      margin-bottom:30px
+color:#e2e8f0;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#ffb703;
+      color:#000;
+      padding:15px 30px;
+      border-radius:10px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ffaa00;
+      transform:translateY(-2px);
+    }
+
+    .hero-image{
+      flex:1;
+      min-width:300px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:500px;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:36px;
+      color:#1e3c72;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    /* COURSE DESCRIPTION */
+
+    .description{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .description img{
+      width:100%;
+      border-radius:15px;
+    }
+    
+    .description-text h3{
+      font-size:28px;
+      margin-bottom:20px;
+      color:#1e3c72;
+    }
+
+    /* TEMARIO */
+
+    .temario{
+      background:white;
+    }
+
+    .modules{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .module-card{
+      background:#f8f9fc;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .module-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .module-card h3{
+      color:#1e3c72;
+      margin-bottom:15px;
+    }
+
+    /* BENEFITS */
+
+    .benefits-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .benefit{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .benefit h3{
+      margin:15px 0;
+      color:#1e3c72;
+    }
+
+    .benefit span{
+      font-size:50px;
+    }
+
+    /* PRICING */
+
+    .pricing{
+      background:linear-gradient(135deg,#1e3c72,#2a5298);
+      color:white;
+    }
+    .description-text h3{
+      font-size:28px;
+      margin-bottom:20px;
+      color:#1e3c72;
+    }
+
+    /* TEMARIO */
+
+    .temario{
+      background:white;
+    }
+
+    .modules{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .module-card{
+      background:#f8f9fc;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .module-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .module-card h3{
+      color:#1e3c72;
+      margin-bottom:15px;
+    }
+
+    /* BENEFITS */
+
+    .benefits-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .benefit{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .benefit h3{
+      margin:15px 0;
+      color:#1e3c72;
+    }
+
+    .benefit span{
+      font-size:50px;
+    }
+
+    /* PRICING */
+
+    .pricing{
+      background:linear-gradient(135deg,#1e3c72,#2a5298);
+      color:white;
+    }
+.pricing-cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .price-card{
+      background:white;
+      color:#222;
+      padding:40px 30px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .price-card h3{
+      color:#1e3c72;
+      margin-bottom:15px;
+    }
+
+    .price{
+      font-size:45px;
+      font-weight:700;
+      margin:20px 0;
+      color:#ff9800;
+    }
+
+    .price-card ul{
+      list-style:none;
+      margin:25px 0;
+    }
+
+    .price-card ul li{
+      margin:12px 0;
+    }
+
+    /* CTA */
+
+    .cta{
+      text-align:center;
+      background:white;
+    }
+
+    .cta h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#1e3c72;
+    }
+
+    .cta p{
+      margin-bottom:30px;
+      color:#555;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    /* RESPONSIVE */
+    
+    @media(max-width:768px){
+
+      .hero-text h1{
+        font-size:36px;
+      }
+
+      .section-title h2{
+        font-size:28px;
+      }
+
+      .cta h2{
+        font-size:30px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container hero">
+
+      <div class="hero-text">
+        <h1>Aprende habilidades digitales y transforma tu futuro</h1>
+
+        <p>
+          Accede a cursos online diseñados para ayudarte a crecer profesionalmente,
+          generar ingresos y dominar herramientas modernas desde cualquier lugar.
+        </p>
+
+        <a href="#planes" class="btn">Inscribirme Ahora</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Curso Online">
+      </div>
+
+    </div>
+  </header>
+<!-- DESCRIPCIÓN -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Descripción del Curso</h2>
+        <p>Todo lo que necesitas para comenzar desde cero</p>
+      </div>
+
+      <div class="description">
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Estudiantes">
+
+        <div class="description-text">
+          <h3>Conviértete en un profesional digital</h3>
+
+          <p>
+            Este curso fue creado para personas que desean aprender habilidades
+            prácticas y aplicables en el mundo real. Tendrás acceso a clases
+            grabadas, recursos descargables y soporte personalizado.
+          </p>
+
+          <br>
+
+          <p>
+            No importa si eres principiante o ya tienes experiencia,
+            el contenido está organizado paso a paso para facilitar tu aprendizaje.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEMARIO -->
+  <section class="temario">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Temario del Curso</h2>
+        <p>Contenido organizado por módulos</p>
+      </div>
+
+      <div class="modules">
+
+        <div class="module-card">
+          <h3>Módulo 1</h3>
+          <p>Introducción y fundamentos básicos.</p>
+        </div>
+
+        <div class="module-card">
+          <h3>Módulo 2</h3>
+          <p>Herramientas y técnicas esenciales.</p>
+        </div>
+
+        <div class="module-card">
+          <h3>Módulo 3</h3>
+          <p>Creación de proyectos reales paso a paso.</p>
+        </div>
+
+        <div class="module-card">
+          <h3>Módulo 4</h3>
+          <p>Estrategias avanzadas y optimización.</p>
+        </div>
+
+        <div class="module-card">
+          <h3>Módulo 5</h3>
+          <p>Monetización y crecimiento profesional.</p>
+        </div>
+
+        <div class="module-card">
+          <h3>Módulo 6</h3>
+          <p>Proyecto final y certificación.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+    <!-- BENEFICIOS -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Beneficios</h2>
+        <p>¿Por qué elegir este curso?</p>
+      </div>
+
+      <div class="benefits-container">
+
+        <div class="benefit">
+          <span>🎓</span>
+          <h3>Certificado</h3>
+          <p>Obtén un certificado al finalizar el curso.</p>
+        </div>
+
+        <div class="benefit">
+          <span>💻</span>
+          <h3>100% Online</h3>
+          <p>Aprende desde cualquier lugar y a tu ritmo.</p>
+        </div>
+
+        <div class="benefit">
+          <span>📚</span>
+          <h3>Material Incluido</h3>
+          <p>Acceso a recursos y archivos descargables.</p>
+        </div>
+
+        <div class="benefit">
+          <span>🚀</span>
+          <h3>Soporte Personalizado</h3>
+          <p>Resuelve tus dudas con acompañamiento profesional.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+<!-- PLANES -->
+  <section class="pricing" id="planes">
+    <div class="container">
+
+      <div class="section-title">
+        <h2 style="color:white;">Planes y Precios</h2>
+        <p style="color:#dbeafe;">Elige la opción ideal para ti</p>
+      </div>
+
+      <div class="pricing-cards">
+
+        <div class="price-card">
+          <h3>Plan Básico</h3>
+
+          <div class="price">$49</div>
+
+          <ul>
+            <li>Acceso al curso</li>
+            <li>Material descargable</li>
+            <li>Acceso por 6 meses</li>
+          </ul>
+
+          <a href="#" class="btn">Comprar Ahora</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Plan Premium</h3>
+
+          <div class="price">$99</div>
+
+          <ul>
+            <li>Acceso completo</li>
+            <li>Mentoría personalizada</li>
+            <li>Certificado oficial</li>
+            <li>Acceso ilimitado</li>
+          </ul>
+
+          <a href="#" class="btn">Inscribirme</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+
+      <h2>Empieza hoy mismo</h2>
+
+      <p>
+        Únete a cientos de estudiantes que ya están mejorando sus habilidades
+        y creando nuevas oportunidades.
+      </p>
+
+      <a href="#" class="btn">Quiero Inscribirme</a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Academia Online - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
